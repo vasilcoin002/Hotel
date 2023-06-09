@@ -1,0 +1,206 @@
+@import nullstyle
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;700&display=swap')
+
+body
+  // font-family: 'Vollkorn', serif
+  font-family: Arial, sans-serif
+  font-size: 16px
+
+.wrapper
+  display: grid
+  grid-template: 100px 1fr 75px / 1fr
+  grid-template-areas: "header" "main" "footer"
+  gap: 50px
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 700
+
+h1
+  font-size: 40px
+
+h2
+  font-size: 35px
+
+h3
+  font-size: 30px
+
+.header
+  grid-area: header
+  position: fixed
+  width: 100%
+  height: 100px
+  display: grid
+  grid-template: 1fr / 5% 60px 1fr 5%
+  grid-template-areas: 'space1 logo navigation space2'
+  align-items: center
+  background: #003B46
+  transition: 0.5s
+  &__logo
+    grid-area: logo
+    height: 60px
+    width: 60px
+    border-radius: 50%
+    background: #c4dfe6
+    transition: 0.5s
+  &__navigation
+    width: 80%
+    grid-area: navigation
+    justify-self: center
+    transition: 0.5s
+  &__buttons
+    display: flex
+    justify-content: space-between
+  // &__item
+  &__button
+    background: none
+    color: #c4dfe6
+    font-size: 20px
+    text-transform: uppercase
+    transition: 1s
+    &:hover
+      text-decoration: underline
+      // background: #002930
+
+.scrolled
+  &.header
+    height: 50px
+    &__logo
+      height: 40px
+      width: 40px
+    &__navigation
+      margin-right: -20%
+
+.main
+  grid-area: main
+  display: flex
+  flex-direction: column
+
+.hi
+  display: grid
+  grid-template: auto / 40% 40%
+  gap: 30px
+  justify-content: center
+  margin-bottom: 50px
+  img
+    width: 100%
+    margin-bottom: 25px
+  &__greetings
+    padding: 25px
+    background: white
+  &__title
+    margin-bottom: 25px
+  &__description
+    margin-bottom: 25px
+
+.special-offer
+  display: grid
+  grid-template: repeat(2, 1fr) / repeat(5, 1fr)
+  gap: 50px
+  padding: 50px
+  background: #c4dfe6
+  &__image
+    grid-row: span 2
+    grid-column: span 3
+    display: flex
+    flex-direction: column
+    justify-content: center
+    img
+      //height: 100%
+      width: 100%
+  &__body
+    grid-row: span 2
+    grid-column: span 2
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    padding: 100px 20px
+  &__title
+    margin-bottom: 10px
+  &__description
+    font-size: 20px
+    letter-spacing: 0.5px
+    margin-bottom: 10px
+  &__button
+    width: 200px
+    height: 50px
+    font-family: 'Vollkorn', serif
+    font-size: 25px
+    background: orangered
+    transition: 0.1s
+    &:hover
+      transform: scale(1.1)
+
+.services
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding: 50px
+  &__title
+    margin-bottom: 50px
+  &__body
+    width: 100%
+    padding: 0 50px
+  &__list
+    display: grid
+    gap: 30px
+    grid-template: 1fr / repeat(3, 1fr)
+  &__item
+    padding: 15px
+    background: #07575B
+    width: 100%
+    height: auto
+
+.offer-services
+  display: grid
+  color: #c4dfe6
+  &__image
+    margin-bottom: 20px
+    overflow: hidden
+    display: flex
+    justify-content: center
+    img
+      height: 300px
+      object-fit: cover
+
+  &__title
+    margin-bottom: 10px
+    justify-self: center
+  &__description
+    margin-bottom: 10px
+  &__button
+    align-self: flex-end
+    height: 50px
+    color: #07575B
+    font-size: 20px
+    transition: 0.1s
+    &:hover
+      transform: scale(1.05)
+
+.footer
+  grid-area: footer
+  height: 75px
+  background: #003B46
+
+.links
+  width: 100%
+  height: 100%
+  padding: 0 50px
+  &__list
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 100%
+  &__item
+    width: 50px
+    height: 50px
+    margin: 0 25px
+  &__button
+    width: 100%
+    height: 100%
+    &_instagram
+      background: url("../img/icon-instagram.png")
+    &_facebook
+      background: url("../img/icon-facebook.png")
+    &_twitter
+      background: url("../img/icon-twitter.png")
