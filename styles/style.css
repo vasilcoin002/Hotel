@@ -3,9 +3,13 @@
   padding: 0;
   margin: 0;
   border: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -86,6 +90,13 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection {
+  background: orangered;
+}
+
+p::selection {
+  background: orangered;
+}
 
 h1 {
   font-size: 40px;
@@ -99,6 +110,10 @@ h3 {
   font-size: 30px;
 }
 
+h4 {
+  font-size: 25px;
+}
+
 .header {
   grid-area: header;
   position: fixed;
@@ -110,6 +125,7 @@ h3 {
   align-items: center;
   background: #003B46;
   transition: 0.5s;
+  z-index: 10;
 }
 .header__logo {
   grid-area: logo;
@@ -156,6 +172,58 @@ h3 {
   display: flex;
   flex-direction: column;
 }
+.main > * {
+  margin-bottom: 50px;
+}
+.main:last-child {
+  margin-bottom: 0;
+}
+
+.footer {
+  grid-area: footer;
+  height: 75px;
+  background: #003B46;
+}
+
+.links {
+  width: 100%;
+  height: 100%;
+  padding: 0 50px;
+}
+.links__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.links__item {
+  width: 50px;
+  height: 50px;
+  margin: 0 25px;
+}
+.links__form {
+  height: 100%;
+}
+.links__button {
+  width: 100%;
+  height: 100%;
+}
+.links__button_instagram {
+  background: url("../img/icon-instagram.png");
+}
+.links__button_telegram {
+  background: url("../img/icon-telegram.png");
+}
+.links__button_github {
+  background: url("../img/icon-github.png");
+}
+.links__button_instagram, .links__button_telegram, .links__button_github {
+  background-size: 100%;
+}
+
+.button_bg_orangered {
+  background: orangered;
+}
 
 .hi {
   display: grid;
@@ -184,6 +252,8 @@ h3 {
   grid-template: repeat(2, 1fr)/repeat(5, 1fr);
   gap: 50px;
   padding: 50px;
+}
+.special-offer_bg_lightblue {
   background: #c4dfe6;
 }
 .special-offer__image {
@@ -216,9 +286,7 @@ h3 {
 .special-offer__button {
   width: 200px;
   height: 50px;
-  font-family: "Vollkorn", serif;
   font-size: 25px;
-  background: orangered;
   transition: 0.1s;
 }
 .special-offer__button:hover {
@@ -262,8 +330,7 @@ h3 {
 }
 .offer-services__image img {
   height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .offer-services__title {
   margin-bottom: 10px;
@@ -283,38 +350,54 @@ h3 {
   transform: scale(1.05);
 }
 
-.footer {
-  grid-area: footer;
-  height: 75px;
-  background: #003B46;
-}
-
-.links {
-  width: 100%;
-  height: 100%;
+.apartments-offer {
+  display: grid;
+  grid-template: 500px auto auto 50px/repeat(2, 1fr);
+  grid-template-areas: "image1 image2" "title1 title2" "description1 description2" "button1 button2";
+  gap: 30px;
   padding: 0 50px;
 }
-.links__list {
+.apartments-offer__image {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+}
+.apartments-offer__image img {
   height: 100%;
 }
-.links__item {
-  width: 50px;
+.apartments-offer__button {
+  width: 200px;
   height: 50px;
-  margin: 0 25px;
+  font-size: 25px;
 }
-.links__button {
+.apartments-offer__title, .apartments-offer__description, .apartments-offer__button {
+  justify-self: center;
+}
+
+.other-apartments {
+  display: grid;
+  grid-template: auto 1fr/repeat(5, 1fr);
+  grid-template-areas: "title title title title title" "arrow-left apartments1 apartments2 apartments3 arrow-right";
+  gap: 30px;
+  justify-content: center;
+  background: #c4dfe6;
+  padding: 50px;
+}
+.other-apartments__title {
+  grid-area: title;
+  justify-self: center;
+}
+.other-apartments__image {
+  height: 150px;
   width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+.other-apartments__image img {
   height: 100%;
 }
-.links__button_instagram {
-  background: url("../img/icon-instagram.png");
-}
-.links__button_facebook {
-  background: url("../img/icon-facebook.png");
-}
-.links__button_twitter {
-  background: url("../img/icon-twitter.png");
-}/*# sourceMappingURL=style.css.map */
+
+/*# sourceMappingURL=style.css.map */
