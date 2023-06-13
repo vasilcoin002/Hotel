@@ -94,7 +94,7 @@ h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::s
   background: orangered;
 }
 
-p::selection {
+p::selection, span::selection {
   background: orangered;
 }
 
@@ -372,6 +372,10 @@ h4 {
   width: 200px;
   height: 50px;
   font-size: 25px;
+  transition: 0.1s;
+}
+.apartments-offer__button:hover {
+  transform: scale(1.1);
 }
 .apartments-offer__title, .apartments-offer__description, .apartments-offer__button {
   justify-self: center;
@@ -469,6 +473,28 @@ h4 {
   background-size: 100%;
   width: 20px;
   height: 20px;
+}
+
+.gallery__title {
+  text-align: center;
+}
+.gallery__photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+.gallery__image {
+  position: relative;
+  padding-bottom: 100%;
+}
+.gallery__image img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
