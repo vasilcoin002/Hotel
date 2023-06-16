@@ -67,7 +67,7 @@ h4
     transition: 1s
     &:hover
       text-decoration: underline
-      // background: #002930
+// background: #002930
 
 .scrolled
   &.header
@@ -257,26 +257,6 @@ h4
   &__title, &__description, &__button
     justify-self: center
 
-.other-apartments
-  display: grid
-  grid-template: auto 1fr / repeat(5, 1fr)
-  grid-template-areas: "title title title title title" "arrow-left apartments1 apartments2 apartments3 arrow-right"
-  gap: 30px
-  justify-content: center
-  background: #c4dfe6
-  padding: 50px
-  &__title
-    grid-area: title
-    justify-self: center
-  &__apartments
-  &__image
-    height: 150px
-    width: 100%
-    overflow: hidden
-    display: flex
-    img
-      height: 100%
-
 //
 // Contacts Page
 //
@@ -363,3 +343,96 @@ h4
       top: 0
       left: 0
       object-fit: cover
+
+// Book a place page / apartments-slider
+
+p, span, div, img
+  &::selection
+    background: orangered
+
+.displayed-none
+  display: none
+
+.opacity07
+  opacity: 0.7
+
+.opacity0
+  opacity: 0
+
+.other-apartments
+  display: flex
+  flex-direction: column
+  gap: 30px
+  align-items: center
+  background: #c4dfe6
+  padding: 50px
+
+.slider
+  position: relative
+  display: flex
+  width: 100%
+  overflow: hidden
+  &__arrow
+    position: absolute
+    font-size: 30px
+    font-weight: 1000
+    color: white
+    top: 40%
+    transform: translateY(-50%)
+    width: 75px
+    height: 75px
+    cursor: pointer
+    background: grey
+    z-index: 3
+    transition: opacity 0.5s
+    &_left
+      left: 0
+      &:before
+        content: '<<'
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translateY(-50%) translateX(-50%)
+    &_right
+      right: 0
+      &:before
+        content: '>>'
+        position: absolute
+        top: 50%
+        right: 50%
+        transform: translateY(-50%) translateX(50%)
+  &__list
+    height: 100%
+    display: flex
+    flex: 1 1 auto
+    transition: 0.5s
+  &__item
+    min-width: 31.3333% // 33.3333 - 2(1% - margin-left and 1% - margin right)
+    margin: 0 1%
+
+.item
+  display: grid
+  &__image
+    position: relative
+    padding: 0 0 100% 0
+    margin: 0 0 20px 0
+    height: 250px
+    img
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      object-fit: cover
+  &__title
+    margin-bottom: 20px
+    align-self: center
+    justify-self: center
+  &__button
+    height: 50px
+    align-self: flex-end
+    text-transform: uppercase
+    font-size: 20px
+    transition: 0.1s
+    &:hover
+      transform: scale(1.05)
