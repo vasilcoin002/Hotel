@@ -1,0 +1,11 @@
+changed font (Arial -> Comfortaa)
+changed elements to adaptive
+header:
+	made animated underline buttons
+	made menu-burger
+Our hotel page: 
+	hi / title: changed color of hotel name (black -> orangered)
+Contacts:
+	removed title
+Gallery:
+	removed title

@@ -4,71 +4,101 @@
     <meta charset="UTF-8">
     <title>Gallery</title>
     <link rel="stylesheet" href="../styles/style.css">
+    <meta name="viewport" content="width=device-width">
 </head>
 <body>
 <div class="wrapper">
-  <header class="header">
-    <div class="header__logo">
+    <header class="header">
+        <div class="header__logo">
 
+        </div>
+        <nav class="header__navigation">
+            <ul class="header__buttons">
+                <li class="header__item">
+                    <form action="./index.html"><input type="submit" class="header__button" value="Our Hotel"></form>
+                    <span class="header__underline"></span>
+                </li>
+                <li class="header__item">
+                    <form action="./booking.html"><input type="submit" class="header__button" value="Book a place"></form>
+                    <span class="header__underline"></span>
+                </li>
+                <li class="header__item">
+                    <form action="./contacts.html"><input type="submit" class="header__button" value="Contacts"></form>
+                    <span class="header__underline"></span>
+                </li>
+                <li class="header__item header__underlined">
+                    <form action="./gallery.html"><input type="submit" class="header__button" value="Gallery"></form>
+                    <span class="header__underline"></span>
+                </li>
+            </ul>
+        </nav>
+        <div class="header__burger-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <!--  Menu Burger  -->
+    <div class="burger">
+        <nav class="burger__menu">
+            <ul class="burger__list">
+                <li class="burger__item">
+                    <form action="./index.html" class="burger__form"><input type="submit" value="Our hotel"></form>
+                    <span class="burger__underline"></span>
+                </li>
+                <li class="burger__item">
+                    <form action="./booking.html" class="burger__form"><input type="submit" value="Book a place"></form>
+                    <span class="burger__underline"></span>
+                </li>
+                <li class="burger__item">
+                    <form action="./contacts.html" class="burger__form"><input type="submit" value="Contacts"></form>
+                    <span class="burger__underline"></span>
+                </li>
+                <li class="burger__item burger__underlined">
+                    <form action="./gallery.html" class="burger__form"><input type="submit" value="Gallery"></form>
+                    <span class="burger__underline"></span>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <nav class="header__navigation">
-      <form action="./booking.html"></form>
-      <ul class="header__buttons">
-        <li class="header__item">
-          <form action="./index.html"><input type="submit" class="header__button" value="Our Hotel"></form>
-        </li>
-        <li class="header__item">
-          <form action="./booking.html"><input type="submit" class="header__button" value="Book a place"></form>
-        </li>
-        <li class="header__item">
-          <form action="./contacts.html"><input type="submit" class="header__button" value="Contacts"></form>
-        </li>
-        <li class="header__item">
-          <form action="./gallery.html"><input type="submit" class="header__button" value="Gallery"></form>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main class="main">
-    <section class="gallery">
-      <h2 class="gallery__title">Gallery of our vacationers</h2>
-      <div class="gallery__photos">
-        <div class="gallery__image"><img src="../img/rest_1.jpg" alt="Rest"></div>
-        <div class="gallery__image"><img src="../img/rest_2.jpg" alt="Rest"></div>
-        <div class="gallery__image"><img src="../img/rest_3.jpg" alt="Rest"></div>
-        <div class="gallery__image"><img src="../img/rest_4.jpg" alt="Rest"></div>
-        <div class="gallery__image"><img src="../img/rest_5.jpg" alt="Rest"></div>
-        <div class="gallery__image"><img src="../img/rest_6.jpg" alt="Rest"></div>
-        <div class="gallery__image"><img src="../img/rest_7.jpg" alt="Rest"></div>
-        <div class="gallery__image"><img src="../img/rest_8.jpg" alt="Rest"></div>
-        <div class="gallery__image"><img src="../img/rest_9.jpg" alt="Rest"></div>
-        <div class="gallery__image"><img src="../img/rest_10.jpg" alt="Rest"></div>
-        <div class="gallery__image"><img src="../img/rest_11.jpg" alt="Rest"></div>
-        <div class="gallery__image"><img src="../img/rest_12.jpg" alt="Rest"></div>
-      </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <section class="links">
-      <ul class="links__list">
-        <li class="links__item">
-          <form class="links__form" action="https://www.instagram.com/klyus_vasya/">
-            <input class="links__button_instagram links__button" type="submit" formtarget="_blank" value="">
-          </form>
-        </li>
-        <li class="links__item">
-          <form class="links__form" action="https://github.com/vasilcoin002">
-            <input class="links__button_github links__button" type="submit" formtarget="_blank" value="">
-          </form>
-        </li>
-        <li class="links__item">
-          <form class="links__form" action="https://t.me/prayectiki">
-            <input class="links__button_telegram links__button" type="submit" formtarget="_blank" value="">
-          </form>
-        </li>
-      </ul>
-    </section>
-  </footer>
+
+    <main class="main">
+        <section class="gallery">
+            <div class="gallery__image"><img src="../img/rest_1.jpg" alt="Rest"></div>
+            <div class="gallery__image"><img src="../img/rest_2.jpg" alt="Rest"></div>
+            <div class="gallery__image"><img src="../img/rest_3.jpg" alt="Rest"></div>
+            <div class="gallery__image"><img src="../img/rest_4.jpg" alt="Rest"></div>
+            <div class="gallery__image"><img src="../img/rest_5.jpg" alt="Rest"></div>
+            <div class="gallery__image"><img src="../img/rest_6.jpg" alt="Rest"></div>
+            <div class="gallery__image"><img src="../img/rest_7.jpg" alt="Rest"></div>
+            <div class="gallery__image"><img src="../img/rest_8.jpg" alt="Rest"></div>
+            <div class="gallery__image"><img src="../img/rest_9.jpg" alt="Rest"></div>
+            <div class="gallery__image"><img src="../img/rest_10.jpg" alt="Rest"></div>
+            <div class="gallery__image"><img src="../img/rest_11.jpg" alt="Rest"></div>
+            <div class="gallery__image"><img src="../img/rest_12.jpg" alt="Rest"></div>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="links">
+            <ul class="links__list">
+                <li class="links__item">
+                    <form class="links__form" action="https://www.instagram.com/klyus_vasya/">
+                        <input class="links__button_instagram links__button" type="submit" formtarget="_blank" value="">
+                    </form>
+                </li>
+                <li class="links__item">
+                    <form class="links__form" action="https://github.com/vasilcoin002">
+                        <input class="links__button_github links__button" type="submit" formtarget="_blank" value="">
+                    </form>
+                </li>
+                <li class="links__item">
+                    <form class="links__form" action="https://t.me/prayectiki">
+                        <input class="links__button_telegram links__button" type="submit" formtarget="_blank" value="">
+                    </form>
+                </li>
+            </ul>
+        </section>
+    </footer>
 </div>
 <script src="../scripts/scripts.js"></script>
 </body>

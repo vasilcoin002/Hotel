@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Book a place</title>
     <link rel="stylesheet" href="../styles/style.css">
+    <meta name="viewport" content="width=device-width">
 </head>
 <body>
 <div class="wrapper">
@@ -12,25 +13,56 @@
 
         </div>
         <nav class="header__navigation">
-            <form action="./booking.html"></form>
             <ul class="header__buttons">
                 <li class="header__item">
                     <form action="./index.html"><input type="submit" class="header__button" value="Our Hotel"></form>
+                    <span class="header__underline"></span>
                 </li>
-                <li class="header__item">
+                <li class="header__item header__underlined">
                     <form action="./booking.html"><input type="submit" class="header__button" value="Book a place"></form>
+                    <span class="header__underline"></span>
                 </li>
                 <li class="header__item">
                     <form action="./contacts.html"><input type="submit" class="header__button" value="Contacts"></form>
+                    <span class="header__underline"></span>
                 </li>
                 <li class="header__item">
                     <form action="./gallery.html"><input type="submit" class="header__button" value="Gallery"></form>
+                    <span class="header__underline"></span>
                 </li>
             </ul>
         </nav>
+        <div class="header__burger-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
-    <main class="main">
+    <!--  Menu Burger  -->
+    <div class="burger">
+        <nav class="burger__menu">
+            <ul class="burger__list">
+                <li class="burger__item">
+                    <form action="./index.html" class="burger__form"><input type="submit" value="Our hotel"></form>
+                    <span class="burger__underline"></span>
+                </li>
+                <li class="burger__item burger__underlined">
+                    <form action="./booking.html" class="burger__form"><input type="submit" value="Book a place"></form>
+                    <span class="burger__underline"></span>
+                </li>
+                <li class="burger__item">
+                    <form action="./contacts.html" class="burger__form"><input type="submit" value="Contacts"></form>
+                    <span class="burger__underline"></span>
+                </li>
+                <li class="burger__item">
+                    <form action="./gallery.html" class="burger__form"><input type="submit" value="Gallery"></form>
+                    <span class="burger__underline"></span>
+                </li>
+            </ul>
+        </nav>
+    </div>
 
+    <main class="main">
         <section class="special-offer special-offer_bg_lightblue">
             <div class="special-offer__image"><img src="../img/apartments_1.jpg" alt="Apartments №1"></div>
             <div class="special-offer__body">
@@ -44,18 +76,19 @@
             <div class="apartments-offer__image">
                 <img src="../img/apartments_2.jpg" alt="Apartments №2">
             </div>
-            <div class="apartments-offer__image">
-                <img src="../img/apartments_3.jpg" alt="Apartments №3">
-            </div>
             <h2 class="apartments-offer__title">Most comfortable choice</h2>
-            <h2 class="apartments-offer__title">Most economical choice</h2>
             <p class="apartments-offer__description">
                 Welcome to our exquisite beachfront apartments, where contemporary elegance intertwines with the allure of the ocean. Indulge in spacious living spaces, mesmerizing vistas, and exclusive amenities including a pool and spa. Immerse yourself in the ultimate beachside getaway, crafting unforgettable moments in this idyllic paradise.
             </p>
+            <input class="apartments-offer__button button_bg_orangered" type="button" value="79$/day">
+
+            <div class="apartments-offer__image">
+                <img src="../img/apartments_3.jpg" alt="Apartments №3">
+            </div>
+            <h2 class="apartments-offer__title">Most economical choice</h2>
             <p class="apartments-offer__description">
                 Welcome to our beautiful beachfront apartments, where modern luxury seamlessly blends with the captivating ocean setting. Experience the spaciousness of our living areas, soak in breathtaking views, and enjoy access to exclusive amenities like a pool and spa. Discover the perfect beachside retreat, where cherished memories are made in this enchanting paradise.
             </p>
-            <input class="apartments-offer__button button_bg_orangered" type="button" value="79$/day">
             <input class="apartments-offer__button button_bg_orangered" type="button" value="35$/day">
         </section>
 
@@ -118,5 +151,6 @@
     </footer>
 </div>
 <script src="../scripts/scripts.js"></script>
+<script src="../scripts/slider-swiper.js"></script>
 </body>
 </html>

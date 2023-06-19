@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Hotel</title>
     <link rel="stylesheet" href="../styles/style.css">
+    <meta name="viewport" content="width=device-width">
 </head>
 <body>
 <div class="wrapper">
@@ -13,26 +14,59 @@
         </div>
         <nav class="header__navigation">
             <ul class="header__buttons">
-                <li class="header__item">
+                <li class="header__item header__underlined">
                     <form action="./index.html"><input type="submit" class="header__button" value="Our Hotel"></form>
+                    <span class="header__underline"></span>
                 </li>
                 <li class="header__item">
                     <form action="./booking.html"><input type="submit" class="header__button" value="Book a place"></form>
+                    <span class="header__underline"></span>
                 </li>
                 <li class="header__item">
                     <form action="./contacts.html"><input type="submit" class="header__button" value="Contacts"></form>
+                    <span class="header__underline"></span>
                 </li>
                 <li class="header__item">
                     <form action="./gallery.html"><input type="submit" class="header__button" value="Gallery"></form>
+                    <span class="header__underline"></span>
                 </li>
             </ul>
         </nav>
+        <div class="header__burger-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
+<!--  Menu Burger  -->
+    <div class="burger">
+        <nav class="burger__menu">
+            <ul class="burger__list">
+                <li class="burger__item burger__underlined">
+                    <form action="./index.html" class="burger__form"><input type="submit" value="Our hotel"></form>
+                    <span class="burger__underline"></span>
+                </li>
+                <li class="burger__item">
+                    <form action="./booking.html" class="burger__form"><input type="submit" value="Book a place"></form>
+                    <span class="burger__underline"></span>
+                </li>
+                <li class="burger__item">
+                    <form action="./contacts.html" class="burger__form"><input type="submit" value="Contacts"></form>
+                    <span class="burger__underline"></span>
+                </li>
+                <li class="burger__item">
+                    <form action="./gallery.html" class="burger__form"><input type="submit" value="Gallery"></form>
+                    <span class="burger__underline"></span>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
     <main class="main">
 
         <section class="hi">
             <div class="hi__greetings">
-                <h1 class="hi__title">Hi, it's a website of "Seahorse Heaven" hotel</h1>
+                <h1 class="hi__title">Hi, it's a website of <br> <span>Seahorse Heaven</span> hotel</h1>
                 <p class="hi__description">Welcome to our summer beach resort, a mesmerizing oasis where sun-kissed shores meet the rhythmic dance of turquoise waves. This enchanting destination is a paradise for those seeking the ultimate seaside escape, where every moment is filled with joy, relaxation, and the embrace of endless summer.</p>
                 <img src="../img/hotel_1.jpg" alt="Hotel">
             </div>
