@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Book a place</title>
+    <link rel="stylesheet" href="../styles/itc-slider.css">
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/booking.css">
     <meta name="viewport" content="width=device-width">
 </head>
 <body>
@@ -94,36 +96,53 @@
 
         <section class="other-apartments">
             <h2 class="other-apartments__title">Other apartments</h2>
-            <div class="slider">
-                <div  class="slider__arrow_left slider__arrow displayed-none opacity0"></div>
-                <ul class="slider__list">
-                    <li class="slider__item item">
-                        <div class="item__image"><img src="../img/apartments_1.jpg" alt="Apartments 1"></div>
-                        <h3 class="item__title">Serene Suites</h3>
-                        <input class="item__button button_bg_orangered" type="button" value="More">
-                    </li>
-                    <li class="slider__item item">
-                        <div class="item__image"><img src="../img/apartments_2.jpg" alt="Apartments 2"></div>
-                        <h3 class="item__title">Harmony Residences</h3>
-                        <input class="item__button button_bg_orangered" type="button" value="More">
-                    </li>
-                    <li class="slider__item item">
-                        <div class="item__image"><img src="../img/apartments_3.jpg" alt="Apartments 3"></div>
-                        <h3 class="item__title">Tranquil Haven</h3>
-                        <input class="item__button button_bg_orangered" type="button" value="More">
-                    </li>
-                    <li class="slider__item item">
-                        <div class="item__image"><img src="../img/apartments_4.jpg" alt="Apartments 4"></div>
-                        <h3 class="item__title">Luxe Living Suites</h3>
-                        <input class="item__button button_bg_orangered" type="button" value="More">
-                    </li>
-                    <li class="slider__item item">
-                        <div class="item__image"><img src="../img/apartments_5.jpg" alt="Apartments 5"></div>
-                        <h3 class="item__title">Opulent Oasis</h3>
-                        <input class="item__button button_bg_orangered" type="button" value="More">
-                    </li>
-                </ul>
-                <div class="slider__arrow_right slider__arrow opacity07"></div>
+            <div class="itc-slider" data-slider="itc-slider" data-loop="false" data-autoplay="false">
+              <div class="itc-slider-wrapper">
+                <div class="itc-slider-items">
+                  <div class="itc-slider-item item">
+                    <div class="item__image"><img src="../img/apartments_1.jpg" alt="Apartments 1"></div>
+                    <h3 class="item__title">Serene Suites</h3>
+                    <input class="item__button button_bg_orangered" type="button" value="More">
+                  </div>
+                  <div class="itc-slider-item item">
+                    <div class="item__image"><img src="../img/apartments_2.jpg" alt="Apartments 2"></div>
+                    <h3 class="item__title">Harmony Residences</h3>
+                    <input class="item__button button_bg_orangered" type="button" value="More">
+                  </div>
+                  <div class="itc-slider-item item">
+                    <div class="item__image"><img src="../img/apartments_3.jpg" alt="Apartments 3"></div>
+                    <h3 class="item__title">Tranquil Haven</h3>
+                    <input class="item__button button_bg_orangered" type="button" value="More">
+                  </div>
+                  <div class="itc-slider-item item">
+                    <div class="item__image"><img src="../img/apartments_4.jpg" alt="Apartments 4"></div>
+                    <h3 class="item__title">Luxe Living Suites</h3>
+                    <input class="item__button button_bg_orangered" type="button" value="More">
+                  </div>
+                  <div class="itc-slider-item item">
+                    <div class="item__image"><img src="../img/apartments_5.jpg" alt="Apartments 5"></div>
+                    <h3 class="item__title">Opulent Oasis</h3>
+                    <input class="item__button button_bg_orangered" type="button" value="More">
+                  </div>
+                  <div class="itc-slider-item item">
+                    <div class="item__image"><img src="../img/apartments_5.jpg" alt="Apartments 5"></div>
+                    <h3 class="item__title">Opulent Oasis</h3>
+                    <input class="item__button button_bg_orangered" type="button" value="More">
+                  </div>
+                  <div class="itc-slider-item item">
+                    <div class="item__image"><img src="../img/apartments_5.jpg" alt="Apartments 5"></div>
+                    <h3 class="item__title">Opulent Oasis</h3>
+                    <input class="item__button button_bg_orangered" type="button" value="More">
+                  </div>
+                  <div class="itc-slider-item item">
+                    <div class="item__image"><img src="../img/apartments_5.jpg" alt="Apartments 5"></div>
+                    <h3 class="item__title">Opulent Oasis</h3>
+                    <input class="item__button button_bg_orangered" type="button" value="More">
+                  </div>
+                </div>
+              </div>
+              <button class="itc-slider-btn itc-slider-btn-prev"></button>
+              <button class="itc-slider-btn itc-slider-btn-next"></button>
             </div>
         </section>
 
@@ -150,7 +169,7 @@
         </section>
     </footer>
 </div>
+<script src="../scripts/itc-slider.js"></script>
 <script src="../scripts/scripts.js"></script>
-<script src="../scripts/slider-swiper.js"></script>
 </body>
 </html>

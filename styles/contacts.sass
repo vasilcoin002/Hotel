@@ -1,0 +1,66 @@
+@import style
+
+.contacts
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 30px
+  align-items: start
+  justify-items: center
+  margin: 0 50px
+  padding: 50px 50px 30px
+  background: #c4dfe6
+  font-size: 20px
+  &__item
+  &__description
+    display: flex
+    flex-direction: column
+  @include image-adaptive(100%)
+  &__person
+    &:before
+      content: "Person:"
+      margin-right: 10px
+      font-weight: 700
+  &__position
+    &:before
+      content: "Position:"
+      margin-right: 10px
+      font-weight: 700
+  &__contact
+    display: flex
+    flex-direction: column
+  &__address
+    position: relative
+    padding-left: 35px
+    color: black
+    overflow-wrap: break-word
+    &_email:before, &_phone-number:before
+      margin-right: 5px
+      top: 0
+      left: 0
+      font-weight: 700
+      position: absolute
+    &_email:before
+      content: '@'
+    &_phone-number:before
+      content: ''
+      background: url("../img/phone.png") no-repeat
+      background-size: 100%
+      width: 20px
+      height: 20px
+
+@media (max-width: 1150px)
+  .contacts
+    grid-template-columns: repeat(2, 1fr)
+
+@media (max-width: 900px)
+  .contacts
+    margin: 0 25px
+    padding: 25px
+
+@media (max-width: 700px)
+  .contacts
+    grid-template-columns: 1fr
+
+@media (max-width: 400px)
+  .contacts
+    margin: 0

@@ -1,19 +1,30 @@
 @import nullstyle
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap')
 
-html
-  height: 100%
+@mixin image-adaptive($padding-bottom)
+  &__image
+    padding: 0 0 $padding-bottom 0
+    overflow: hidden
+    position: relative
+    img
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      object-fit: cover
 
 body
+  flex: 1 0 2000px
+  //display: block
   font-family: 'Comfortaa', cursive
   font-size: 1rem
-  min-width: 100%
-  min-height: 100%
 
 .wrapper
   display: grid
   grid-template-rows: 100px 1fr 75px
   grid-template-areas: "header" "main" "footer"
+  height: 100%
   gap: 50px
 
 h1, h2, h3, h4, h5, h6
@@ -21,8 +32,9 @@ h1, h2, h3, h4, h5, h6
   &::selection
     background: orangered
 
-p::selection, span::selection
-  background: orangered
+p, span, div, img
+  &::selection
+    background: orangered
 
 h1
   font-size: 2.5rem
@@ -35,6 +47,9 @@ h3
 
 h4
   font-size: 1.5625rem
+
+img
+  //display: none
 
 .header
   grid-area: header
@@ -145,6 +160,7 @@ h4
   &__underlined
     span
       left: 0
+
 .burger_active
   top: 0
 
@@ -161,6 +177,8 @@ h4
   grid-area: main
   display: flex
   flex-direction: column
+  //display: none
+  max-width: 100%
   &>*
     margin-bottom: 50px
   &:last-child
@@ -169,21 +187,22 @@ h4
 .footer
   grid-area: footer
   height: 75px
+  width: 100%
   background: #003B46
+  //display: none
 
 .links
   width: 100%
   height: 100%
-  padding: 0 50px
   &__list
     display: flex
     align-items: center
     justify-content: center
+    column-gap: 25px
     height: 100%
   &__item
     width: 50px
     height: 50px
-    margin: 0 25px
   &__form
     height: 100%
   &__button
@@ -202,324 +221,6 @@ h4
   &_bg
     &_orangered
       background: orangered
-
-// 
-// Start Page
-//
-
-.hi
-  display: grid
-  grid-template-columns: 1fr 1fr
-  gap: 30px
-  justify-content: center
-  margin-bottom: 50px
-  padding: 0 50px
-  img
-    width: 100%
-    margin-bottom: 25px
-  &__greetings
-    background: white
-  &__title
-    margin-bottom: 25px
-    span
-      color: orangered
-  &__description
-    margin-bottom: 25px
-
-.special-offer
-  display: grid
-  grid-template: 1fr / 60% 40%
-  gap: 50px
-  padding: 50px
-  &_bg_lightblue
-    background: #c4dfe6
-  &__image
-    padding: 0 0 60% 0
-    overflow: hidden
-    position: relative
-    img
-      position: absolute
-      width: 100%
-      height: 100%
-      top: 0
-      left: 0
-      object-fit: cover
-  &__body
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: space-between
-    padding: 100px 20px
-  &__title
-    margin-bottom: 10px
-  &__description
-    font-size: 20px
-    letter-spacing: 0.5px
-    margin-bottom: 10px
-  &__button
-    width: 200px
-    height: 50px
-    font-size: 25px
-    transition: 0.1s
-    &:hover
-      transform: scale(1.1)
-
-.services
-  display: flex
-  flex-direction: column
-  align-items: center
-  padding: 0 50px
-  &__title
-    margin-bottom: 50px
-  &__body
-    width: 100%
-  &__list
-    display: grid
-    gap: 30px
-    grid-template: 1fr / repeat(3, 1fr)
-  &__item
-    padding: 15px
-    background: #07575B
-    width: 100%
-    height: auto
-
-.offer-services
-  display: grid
-  color: #c4dfe6
-  &__image
-    margin-bottom: 20px
-    overflow: hidden
-    display: flex
-    justify-content: center
-    img
-      height: 300px
-      object-fit: cover
-
-  &__title
-    margin-bottom: 10px
-    justify-self: center
-  &__description
-    margin-bottom: 10px
-  &__button
-    align-self: flex-end
-    height: 50px
-    color: #07575B
-    font-size: 20px
-    transition: 0.1s
-    &:hover
-      transform: scale(1.05)
-
-//
-// Book a place page
-//
-
-.apartments-offer
-  display: grid
-  grid-auto-flow: column
-  //grid-template-rows: 500px auto auto 50px
-  grid-template-columns: repeat(2, 1fr)
-  grid-template-areas: "image1 image2" "title1 title2" "description1 description2" "button1 button2"
-  gap: 30px
-  padding: 0 50px
-  &__image
-    padding: 0 0 100% 0
-    overflow: hidden
-    position: relative
-    img
-      position: absolute
-      width: 100%
-      height: 100%
-      top: 0
-      left: 0
-      object-fit: cover
-  &__button
-    width: 200px
-    height: 50px
-    font-size: 25px
-    transition: 0.1s
-    &:hover
-      transform: scale(1.1)
-  &__title, &__description, &__button
-    justify-self: center
-
-//
-// Contacts Page
-//
-
-.contacts
-  display: grid
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr))
-  gap: 30px
-  align-items: center
-  justify-items: center
-  margin: 0 50px
-  padding: 50px 50px 30px
-  background: #c4dfe6
-  font-size: 20px
-  &__item
-    width: 100%
-  &__description
-    display: flex
-    flex-direction: column
-  &__image
-    position: relative
-    padding-bottom: 100%
-    margin-bottom: 20px
-    img
-      width: 100%
-      height: 100%
-      position: absolute
-      top: 0
-      left: 0
-      object-fit: cover
-  &__person
-    &:before
-      content: "Person:"
-      margin-right: 10px
-      font-weight: 700
-  &__position
-    &:before
-      content: "Position:"
-      margin-right: 10px
-      font-weight: 700
-  &__contact
-    display: flex
-    flex-direction: column
-  &__address
-    position: relative
-    padding-left: 35px
-    color: black
-    &_email:before, &_phone-number:before
-      margin-right: 5px
-      top: 0
-      left: 0
-      font-weight: 700
-      position: absolute
-    &_email:before
-      content: '@'
-    &_phone-number:before
-      content: ''
-      background: url("../img/phone.png") no-repeat
-      background-size: 100%
-      width: 20px
-      height: 20px
-
-//
-// Gallery Page
-//
-
-.gallery
-  display: grid
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr))
-  gap: 10px
-  padding: 10px
-  &__image
-    position: relative
-    padding-bottom: 100%
-    img
-      width: 100%
-      height: 100%
-      position: absolute
-      top: 0
-      left: 0
-      object-fit: cover
-
-// Book a place page / apartments-slider
-
-p, span, div, img
-  &::selection
-    background: orangered
-
-.displayed-none
-  display: none
-
-.opacity07
-  opacity: 0.7
-
-.opacity0
-  opacity: 0
-
-.other-apartments
-  display: flex
-  flex-direction: column
-  gap: 30px
-  align-items: center
-  background: #c4dfe6
-  padding: 50px
-
-.slider
-  position: relative
-  display: flex
-  width: 100%
-  overflow: hidden
-  //display: none
-  &__arrow
-    position: absolute
-    font-size: 30px
-    font-weight: 1000
-    color: white
-    top: 40%
-    transform: translateY(-50%)
-    width: 75px
-    height: 75px
-    cursor: pointer
-    background: grey
-    z-index: 3
-    transition: opacity 0.5s
-    &_left
-      left: 0
-      &:before
-        content: '<<'
-        position: absolute
-        top: 50%
-        left: 50%
-        transform: translateY(-50%) translateX(-50%)
-    &_right
-      right: 0
-      &:before
-        content: '>>'
-        position: absolute
-        top: 50%
-        right: 50%
-        transform: translateY(-50%) translateX(50%)
-  &__list
-    height: 100%
-    display: flex
-    flex: 1 1 auto
-    transition: 0.5s
-  &__item
-    min-width: 31.3333% // 33.3333 - 2(1% - margin-left and 1% - margin right)
-    margin: 0 1%
-
-.item
-  display: grid
-  &__image
-    position: relative
-    padding: 0 0 100% 0
-    margin: 0 0 20px 0
-    height: 250px
-    img
-      width: 100%
-      height: 100%
-      position: absolute
-      top: 0
-      left: 0
-      object-fit: cover
-  &__title
-    margin-bottom: 20px
-    align-self: center
-    justify-self: center
-  &__button
-    height: 50px
-    align-self: flex-end
-    text-transform: uppercase
-    font-size: 20px
-    transition: 0.1s
-    &:hover
-      transform: scale(1.05)
-
-//.apartments-offer
-//  display: none
 
 // Adaptive pages
 

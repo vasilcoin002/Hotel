@@ -1,0 +1,106 @@
+@import style, './common/special-offer'
+
+.apartments-offer
+  display: grid
+  grid-auto-flow: column
+  grid-template-columns: repeat(2, 1fr)
+  grid-template-areas: "image1 image2" "title1 title2" "description1 description2" "button1 button2"
+  gap: 30px
+  padding: 0 50px
+  @include image-adaptive(100%)
+  &__description
+    margin-bottom: 10px
+  &__button
+    width: 200px
+    height: 50px
+    font-size: 25px
+    transition: 0.1s
+    &:hover
+      transform: scale(1.1)
+  &__title, &__description, &__button
+    justify-self: center
+
+// slider
+
+.other-apartments
+  display: flex
+  flex-direction: column
+  gap: 30px
+  align-items: center
+  background: #c4dfe6
+  padding: 50px
+  margin-bottom: 0
+
+.item
+  display: grid
+  background: none
+  @include image-adaptive(100%)
+  &__image
+    margin-bottom: 20px
+  &__title
+    margin-bottom: 20px
+    align-self: center
+    justify-self: center
+    background: none
+    min-height: 3.75rem
+    text-align: center
+  &__button
+    height: 50px
+    align-self: flex-end
+    text-transform: uppercase
+    font-size: 20px
+    transition: 0.1s
+    &:hover
+      transform: scale(1.05)
+
+.itc-slider
+  background: none
+  &-item
+    flex: 0 0 33.3333%
+  &-items
+    --gap: 10px
+    gap: var(--gap)
+
+
+@media (max-width: 1024px)
+  .other-apartments
+    padding: 50px 20px
+  .itc-slider
+    max-width: 767px
+    &-item
+      flex: 0 0 calc(50% - var(--gap) / 2)
+
+@media (max-width: 900px)
+  .apartments-offer
+    display: block
+    padding: 0 25px
+    &__title
+      text-align: center
+      margin-bottom: 10px
+    &__button
+      width: 100%
+      margin-bottom: 20px
+  .itc-slider
+    max-width: 667px
+
+@media (max-width: 800px)
+  .itc-slider
+    max-width: 550px
+
+@media (max-width: 600px)
+  .itc-slider
+    max-width: 450px
+
+@media (max-width: 500px)
+  .itc-slider
+    max-width: 375px
+    &-item
+      flex: 0 0 calc(100% - var(--gap) / 2)
+
+@media (max-width: 425px)
+  .itc-slider
+    max-width: 325px
+
+@media (max-width: 375px)
+  .itc-slider
+    max-width: 275px

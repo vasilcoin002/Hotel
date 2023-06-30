@@ -35,5 +35,3 @@ burger__button.addEventListener('click', () => {
         burger.classList.add('burger_active')
     }
 })
-
-console.log(window.location)
