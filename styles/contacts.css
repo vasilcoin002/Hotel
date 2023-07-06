@@ -89,6 +89,10 @@ body {
   gap: 50px;
 }
 
+.scroll-lock {
+  overflow: hidden;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
@@ -374,6 +378,9 @@ h4 {
   top: 0;
   left: 0;
   object-fit: cover;
+}
+.contacts__image {
+  margin-bottom: 5px;
 }
 .contacts__person:before {
   content: "Person:";

@@ -89,6 +89,10 @@ body {
   gap: 50px;
 }
 
+.scroll-lock {
+  overflow: hidden;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
@@ -523,6 +527,9 @@ h4 {
   .apartments-offer {
     display: block;
     padding: 0 25px;
+  }
+  .apartments-offer__image {
+    margin-bottom: 10px;
   }
   .apartments-offer__title {
     text-align: center;
